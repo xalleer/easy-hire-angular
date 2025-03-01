@@ -1,0 +1,7 @@
+{
+  "name": "easy-hire-angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
