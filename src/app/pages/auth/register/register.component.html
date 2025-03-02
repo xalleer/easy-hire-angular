@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="/auth/welcome" slot="start"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="logo">
+    logo
+  </div>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <ion-item lines="none">
+      <ion-input placeholder="Name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-input placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-input placeholder="Phone" formControlName="phone"></ion-input>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-input placeholder="Role" formControlName="role"></ion-input>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-input placeholder="Password" formControlName="password"></ion-input>
+    </ion-item>
+
+
+    <ion-button type="submit">Sign up</ion-button>
+  </form>
+</ion-content>
+

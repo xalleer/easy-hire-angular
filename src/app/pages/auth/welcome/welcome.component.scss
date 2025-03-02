@@ -1,0 +1,13 @@
+:host{
+  padding: 24px;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+ion-footer{
+  display: flex;
+  flex-direction: column;
+}

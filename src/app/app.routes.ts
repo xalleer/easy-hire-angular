@@ -1,4 +1,8 @@
 import { Routes } from '@angular/router';
+import {WelcomeComponent} from "./pages/auth/welcome/welcome.component";
+import {LoginComponent} from "./pages/auth/login/login.component";
+import {RegisterComponent} from "./pages/auth/register/register.component";
+import {ProfileComponent} from "./pages/main/profile/profile.component";
 
 export const routes: Routes = [
   {
@@ -9,23 +13,26 @@ export const routes: Routes = [
   {
     path: 'auth',
     children: [
-      {
-        path: 'welcome',
-        loadComponent: () => import('./auth/welcome/welcome.component').then((m) => m.WelcomeComponent),
-      },
-      {
-        path: 'login',
-        loadComponent: () => import('./auth/login/login.component').then((m) => m.LoginComponent),
-      },
-      {
-        path: 'register',
-        loadComponent: () => import('./auth/register/register.component').then((m) => m.RegisterComponent),
-      },
-    ],
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'welcome', component: WelcomeComponent },
+    ]
   },
+
   {
     path: '',
-    redirectTo: 'auth/login',
+    redirectTo: 'profile',
+    pathMatch: 'full',
+  },
+
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+
+  {
+    path: '',
+    redirectTo: 'auth/register',
     pathMatch: 'full',
   },
 ];
